@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }}</title>
+  <link rel="stylesheet" href="{% static 'portafolio/css/estilos.css' %}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="{% url 'portafolio:inicio' %}">Nexo</a>
+
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+      <nav aria-label="Menú principal">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="{% url 'portafolio:inicio' %}" class="{% if active_page == 'inicio' %}active{% endif %}">Inicio</a></li>
+          <li><a href="{% url 'portafolio:sobre_mi' %}" class="{% if active_page == 'sobre_mi' %}active{% endif %}">Sobre mí</a></li>
+          <li><a href="{% url 'portafolio:habilidades' %}" class="{% if active_page == 'habilidades' %}active{% endif %}">Habilidades</a></li>
+          <li><a href="{% url 'portafolio:proyectos' %}" class="{% if active_page == 'proyectos' %}active{% endif %}">Proyectos</a></li>
+          <li><a href="{% url 'portafolio:contacto' %}" class="{% if active_page == 'contacto' %}active{% endif %}">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <span class="status-pill"><span class="status-dot"></span> DISPONIBLE · GUATEMALA &amp; REMOTO</span>
+        <img class="nav-avatar" src="{% static 'portafolio/img/bayron.jpg' %}" alt="Foto de perfil">
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Nexo</strong> · © 2026 Bayron Rafael. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="{% url 'portafolio:contacto' %}">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'portafolio/js/main.js' %}"></script>
+</body>
+</html>

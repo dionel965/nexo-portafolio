@@ -1,0 +1,76 @@
+{% extends "portafolio/base.html" %}
+
+{% block content %}
+<span class="kicker">● Diálogo directo · Canales &amp; Conversación</span>
+<h1 class="page-title">Contacto</h1>
+<p class="page-lead">
+  Si quieres comentarme algo sobre mis proyectos, intercambiar ideas o escribirme para colaborar, aquí tienes varias formas de hacerlo.
+</p>
+
+<section class="contact-grid">
+
+  <article class="card">
+    <h2>Envíame un mensaje</h2>
+    <p class="page-lead" style="margin-bottom:1.25rem;">Escríbeme directamente desde este formulario.</p>
+
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="nombre">Nombre *</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo electrónico *</label>
+        <input type="email" id="correo" name="correo" placeholder="tu.correo@ejemplo.com" required>
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Mensaje *</label>
+        <textarea id="mensaje" name="mensaje" rows="5" maxlength="600" placeholder="Cuéntame en qué puedo ayudarte..." required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Enviar mensaje →</button>
+      <div class="form-feedback" id="formFeedback" role="status"></div>
+    </form>
+  </article>
+
+  <div class="about-stack">
+    <article class="card">
+      <h3>Canales directos</h3>
+      <p class="page-lead">También puedes contactarme o seguir mi trabajo a través de estos canales.</p>
+
+      <div class="channel-card">
+        <div>
+          <small style="color:var(--text-muted);">CORREO ELECTRÓNICO</small><br>
+          <strong>bayronrafael74@gmail.com</strong>
+        </div>
+        <a class="btn btn-outline" href="mailto:tu.correo@ejemplo.com">Escribir</a>
+      </div>
+
+      <div class="channel-card">
+        <div>
+          <small style="color:var(--text-muted);">GITHUB</small><br>
+          <strong>@dionel965</strong>
+        </div>
+        <a class="btn btn-outline" href="https://github.com/" target="_blank" rel="noopener">Ver perfil</a>
+      </div>
+
+      <div class="channel-card">
+        <div>
+          <small style="color:var(--text-muted);">MÚSICA &amp; PLAYLISTS</small><br>
+          <strong>Selecciones de concentración</strong>
+        </div>
+        <a class="btn btn-outline" href="{% url 'portafolio:proyectos' %}">Ver proyecto</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="kicker">● Actualmente receptivo a propuestas</span>
+      <p class="page-lead">Disponible para proyectos académicos, desarrollo web y colaboraciones creativas.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.45rem; margin-top:0.85rem;">
+        <span class="tag">Proyectos web</span>
+        <span class="tag">Recomendaciones musicales o lecturas</span>
+        <span class="tag">Preguntas sobre código</span>
+      </div>
+    </article>
+  </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "portafolio/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="hero-grid">
+  <div>
+    <span class="kicker kicker-mint">● Estudiante de informática · Portafolio</span>
+    <h1 class="page-title">Hola, soy Bayron</h1>
+    <p class="hero-subtitle">Construyo sitios web, escucho música, juego videojuegos y hago preguntas filosóficas.</p>
+    <p class="page-lead">
+      Este es mi portafolio: una mezcla de proyectos de programación, intereses personales y formas de pensar la tecnología.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{% url 'portafolio:proyectos' %}">Ver proyectos</a>
+      <a class="btn btn-outline" href="{% url 'portafolio:contacto' %}">Contactarme</a>
+    </div>
+  </div>
+
+  <div class="portrait-card">
+    <img src="{% static 'portafolio/img/bayron.jpg' %}" alt="Foto de perfil">
+    <div class="portrait-caption">Bayron Rafael</div>
+  </div>
+</section>
+
+<section>
+  <h2>Enfoque actual</h2>
+  <p class="page-lead">Cuatro dimensiones que estructuran mis proyectos, lecturas y forma de aprender.</p>
+
+  <div class="focus-grid">
+    <article class="card focus-card focus-blue">
+      <span class="kicker">● Código</span>
+      <p>Desarrollo web moderno, sistemas sencillos y herramientas útiles.</p>
+    </article>
+    <article class="card focus-card focus-lavender">
+      <span class="kicker kicker-lavender">● Música</span>
+      <p>Paisajes sonoros, producción amateur y coleccionismo de vinilos.</p>
+    </article>
+    <article class="card focus-card focus-amber">
+      <span class="kicker kicker-amber">● Filosofía</span>
+      <p>Lecturas sobre tecnología, ética posdigital y epistemología.</p>
+    </article>
+    <article class="card focus-card focus-mint">
+      <span class="kicker kicker-mint">● Gaming</span>
+      <p>Análisis de mecánicas, diseño interactivo y narrativa indie.</p>
+    </article>
+  </div>
+
+  <div class="section-cta-end">
+    <a class="btn btn-primary" href="{% url 'portafolio:sobre_mi' %}">Sobre mí →</a>
+  </div>
+</section>
+{% endblock %}

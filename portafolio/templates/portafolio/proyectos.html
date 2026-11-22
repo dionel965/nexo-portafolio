@@ -1,0 +1,119 @@
+{% extends "portafolio/base.html" %}
+
+{% block content %}
+<span class="kicker">● Trabajos &amp; Experimentación</span>
+<h1 class="page-title">Proyectos</h1>
+<p class="page-lead">
+  Tres proyectos personales donde practico desarrollo web y conecto mis intereses con la tecnología.
+</p>
+
+<!-- Filtro interactivo (lo controla main.js) -->
+<div class="filter-bar" role="group" aria-label="Filtrar proyectos por tecnología">
+  <button class="filter-btn active" type="button" data-filter="all">Todos (03)</button>
+  <button class="filter-btn" type="button" data-filter="javascript">JavaScript</button>
+  <button class="filter-btn" type="button" data-filter="django">Django &amp; Python</button>
+  <button class="filter-btn" type="button" data-filter="html-css">HTML &amp; CSS</button>
+</div>
+
+<section class="projects-grid">
+
+  <!-- Proyecto 1 -->
+  <article class="card project-card" data-tags="html-css javascript">
+    <div class="project-preview">
+      <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+        <span>Audio Engine v1.2</span>
+        <span class="tag tag-lavender">Ambient</span>
+      </div>
+      <div class="preview-box">
+        <strong>Kiasmos — Looped Horizon</strong>
+        <p style="margin:0.25rem 0 0; font-size:0.75rem; color:var(--text-secondary);">Álbum · Electrónica</p>
+      </div>
+    </div>
+    <div class="project-body">
+      <span class="kicker kicker-lavender" style="width:fit-content;">● 01 · Música</span>
+      <h3>Explorador de playlists</h3>
+      <p>
+        Aplicación web para filtrar canciones o álbumes por género y estado de escucha.
+      </p>
+      <div class="project-tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a class="btn btn-outline" href="https://github.com/" target="_blank" rel="noopener">Ver repositorio</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Proyecto 2 -->
+  <article class="card project-card" data-tags="html-css javascript">
+    <div class="project-preview">
+      <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+        <span>Logbook v2.0</span>
+        <span class="tag tag-blue">94% Completado</span>
+      </div>
+      <div class="preview-box">
+        <strong>Outer Wilds · ★ 9.4/10</strong>
+        <p style="margin:0.25rem 0 0; font-size:0.75rem; color:var(--text-secondary);">Aventura · Completado</p>
+      </div>
+    </div>
+    <div class="project-body">
+      <span class="kicker" style="width:fit-content;">● 02 · Gaming &amp; Registro</span>
+      <h3>Bitácora gamer</h3>
+      <p>
+        Registro personal de videojuegos jugados con puntuaciones y etiquetas de estado.
+      </p>
+      <div class="project-tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a class="btn btn-outline" href="https://github.com/" target="_blank" rel="noopener">Ver repositorio</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Proyecto 3: Atlas filosófico -->
+  <article class="card project-card" data-tags="django html-css">
+    <div class="project-preview">
+      <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+        <span>Atlas v0.8 · Epistemología</span>
+        <span class="tag">Django</span>
+      </div>
+      <div class="preview-box">
+        <strong>Ontología &gt; Fenomenología</strong>
+        <p style="margin:0.25rem 0 0; font-size:0.75rem; color:var(--text-secondary);">Concepto · Rama de la filosofía</p>
+      </div>
+    </div>
+    <div class="project-body">
+      <span class="kicker kicker-mint" style="width:fit-content;">● 03 · Filosofía</span>
+      <h3>Atlas filosófico</h3>
+      <p>
+        Sitio web estructurado con rutas y plantillas para explorar conceptos filosóficos.
+      </p>
+      <div class="project-tags">
+        <span class="tag tag-blue">Python</span>
+        <span class="tag tag-blue">Django</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+      </div>
+      <div class="project-links">
+        <!-- CAMBIAR este href cuando Atlas filosófico esté listo (ver abajo) -->
+        <a class="btn btn-primary" href="/atlas/">Abrir Atlas filosófico →</a>
+        <a class="btn btn-outline" href="https://github.com/" target="_blank" rel="noopener">Ver repositorio</a>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<section class="card cta-banner">
+  <div>
+    <span class="kicker">● Conversemos</span>
+    <h3 style="margin:0.25rem 0 0;">¿Tienes una idea o proyecto en mente?</h3>
+  </div>
+  <a class="btn btn-primary" href="{% url 'portafolio:contacto' %}">Ir a Contacto →</a>
+</section>
+{% endblock %}

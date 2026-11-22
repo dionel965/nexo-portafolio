@@ -1,0 +1,89 @@
+{% extends "portafolio/base.html" %}
+
+{% block content %}
+<span class="kicker">● Capacidades &amp; Stack técnico</span>
+<h1 class="page-title">Habilidades</h1>
+<p class="page-lead">Herramientas, lenguajes y formas de análisis que utilizo en mis proyectos.</p>
+
+<section class="skills-grid">
+
+  <article class="card skill-card-blue">
+    <span class="tag">01</span>
+    <h2 style="margin-top:0.65rem;">Desarrollo web</h2>
+    <p class="page-lead">Fundamentos sólidos en HTML, CSS, JavaScript y Python con Django.</p>
+
+    <div class="skill-item">
+      <div class="skill-row"><strong>HTML5</strong><span class="tag tag-blue">Básico+</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:88%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-row"><strong>CSS3 (flexbox, grid)</strong><span class="tag tag-blue">Intermedio</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-row"><strong>JavaScript (DOM y filtros)</strong><span class="tag tag-blue">Intermedio</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:72%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-row"><strong>Python (lógica y scripting)</strong><span class="tag tag-blue">Intermedio</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:76%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-row"><strong>Django (rutas y plantillas)</strong><span class="tag tag-blue">Intermedio</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:74%;"></div></div>
+    </div>
+  </article>
+
+  <article class="card skill-card-slate">
+    <span class="tag">02</span>
+    <h2 style="margin-top:0.65rem;">Herramientas y flujo</h2>
+    <p class="page-lead">Ecosistema para control de versiones, diseño colaborativo y desarrollo.</p>
+
+    <div class="skill-item">
+      <div class="skill-row"><strong>Git y GitHub</strong><span class="tag tag-blue">Intermedio</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:82%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-row"><strong>Figma (componentes)</strong><span class="tag tag-blue">Intermedio</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:78%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-row"><strong>Google Stitch</strong><span class="tag">En práctica</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:75%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-row"><strong>VS Code</strong><span class="tag tag-blue">Avanzado</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:86%;"></div></div>
+    </div>
+  </article>
+
+  <article class="card skill-card-indigo">
+    <span class="tag">03</span>
+    <h2 style="margin-top:0.65rem;">Pensamiento y análisis</h2>
+    <p class="page-lead">Metodología analítica orientada a deconstruir problemas y ordenar ideas.</p>
+
+    <div class="skill-item">
+      <div class="skill-row"><strong>Resolución de problemas</strong><span class="tag tag-blue">Intermedio</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:84%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-row"><strong>Lectura crítica</strong><span class="tag tag-blue">Avanzado</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:86%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-row"><strong>Síntesis de ideas</strong><span class="tag tag-blue">Intermedio</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:80%;"></div></div>
+    </div>
+  </article>
+
+</section>
+
+<section class="card cta-banner">
+  <div>
+    <span class="tag">METODOLOGÍA APLICADA</span>
+    <h3 style="margin:0.5rem 0 0.25rem;">Enfoque de aprendizaje continuo</h3>
+    <p class="page-lead">Cada competencia técnica evoluciona mediante práctica constante y proyectos reales.</p>
+  </div>
+  <a class="btn btn-primary" href="{% url 'portafolio:proyectos' %}">Ver proyectos →</a>
+</section>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "portafolio/base.html" %}
+
+{% block content %}
+<div class="header-split">
+  <div>
+    <span class="kicker">● Trayectoria &amp; Perspectiva</span>
+    <h1 class="page-title">Sobre mí</h1>
+  </div>
+  <p class="page-lead">
+    Estudiante de informática interesado en unir lógica, creatividad y curiosidad.
+  </p>
+</div>
+
+<section class="about-grid">
+  <div class="about-stack">
+    <article class="card">
+      <span class="tag">01 · FILOSOFÍA DE TRABAJO</span>
+      <h2 style="margin-top:0.75rem;">Quién soy y cómo trabajo</h2>
+      <p class="page-lead">
+        Me gusta entender cómo funcionan las cosas por dentro antes de construirlas.
+        Prefiero soluciones simples, claras y bien pensadas.
+      </p>
+      <blockquote class="quote-box">
+        “La elegancia en el software no reside en la complejidad que se oculta, sino en la claridad que se muestra.”
+      </blockquote>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+        <span class="tag tag-blue">● Claridad</span>
+        <span class="tag">● Rigor analítico</span>
+        <span class="tag">● Curiosidad continua</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="tag">ENTORNO &amp; METODOLOGÍA</span>
+      <h3 style="margin-top:0.65rem;">Del concepto al despliegue</h3>
+      <p class="page-lead">
+        Trabajo en iteraciones cortas, con documentación concisa y código legible.
+      </p>
+    </article>
+  </div>
+
+  <div class="about-stack">
+    <article class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <span class="tag">02 · APRENDIZAJE</span>
+        <span class="tag tag-blue">Activo</span>
+      </div>
+      <h2 style="margin-top:0.75rem;">Formación</h2>
+      <p class="page-lead">
+        Estudiante de informática enfocándose en desarrollo web (Python, Django, HTML, CSS y JavaScript).
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.45rem; margin-top:1rem;">
+        <span class="tag tag-blue">Python</span>
+        <span class="tag tag-blue">Django</span>
+        <span class="tag">HTML5 &amp; CSS3</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Git / GitHub</span>
+        <span class="tag">UI Design</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="tag">03 · CRUCE DE DISCIPLINAS</span>
+      <h2 style="margin-top:0.75rem;">Intereses</h2>
+      <div class="interest-item">
+        <span class="kicker kicker-lavender">● Música</span>
+        <p>Ritmo para estudiar y concentrarse, paisajes sonoros y apreciación musical.</p>
+      </div>
+      <div class="interest-item">
+        <span class="kicker kicker-mint">● Videojuegos</span>
+        <p>Narrativa, sistemas, diseño de reglas y resolución de retos interactivos.</p>
+      </div>
+      <div class="interest-item">
+        <span class="kicker kicker-amber">● Filosofía</span>
+        <p>Cuestionar supuestos, epistemología de la técnica y decidir con mayor criterio.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="card cta-banner">
+  <div>
+    <span class="tag">CONTINUIDAD DE DIÁLOGO</span>
+    <h3 style="margin:0.5rem 0 0.25rem;">Explora mis trabajos en la sección de habilidades y proyectos</h3>
+    <p class="page-lead">Disponible para colaboraciones creativas y desarrollo de proyectos web.</p>
+  </div>
+  <div style="display:flex; gap:0.65rem; flex-wrap:wrap;">
+    <a class="btn btn-primary" href="{% url 'portafolio:habilidades' %}">Mis habilidades</a>
+    <a class="btn btn-outline" href="{% url 'portafolio:contacto' %}">Contacto</a>
+  </div>
+</section>
+{% endblock %}
