@@ -34,24 +34,12 @@ Inicio, Sobre mí, Habilidades, Proyectos (con filtro en JavaScript) y Contacto 
 
 ## Comparación Figma vs sitio
 
-### Escritorio
-| Figma | Sitio |
-|---|---|
-| ![Figma inicio](capturas/figma-inicio-escritorio.png) | ![Sitio inicio](capturas/sitio-inicio-escritorio.png) |
-| ![Figma sobre mí](capturas/figma-sobre-mi-escritorio.png) | ![Sitio sobre mí](capturas/sitio-sobre-mi-escritorio.png) |
-| ![Figma habilidades](capturas/figma-habilidades-escritorio.png) | ![Sitio habilidades](capturas/sitio-habilidades-escritorio.png) |
-| ![Figma proyectos](capturas/figma-proyectos-escritorio.png) | ![Sitio proyectos](capturas/sitio-proyectos-escritorio.png) |
-| ![Figma contacto](capturas/figma-contacto-escritorio.png) | ![Sitio contacto](capturas/sitio-contacto-escritorio.png) |
+### Escritorio y Móvil (390 px)
+`vista-web-movil-figma.docx`
 
-### Móvil (390 px)
-| Figma | Sitio |
-|---|---|
-| ![Figma inicio](capturas/figma-inicio-movil.png) | ![Sitio inicio](capturas/sitio-inicio-movil.png) |
-
-(Repite la fila para cada página móvil.)
 
 ## Diferencias respecto al diseño
-- Escribe aquí, con honestidad, lo que cambió (textos, espaciados, colores).
+- Respecto al diseño realizado en figma las cosas cambian ya en produccion,uno no espero encontrar complicaciones que lo atrasen,pero sin embargo se trato te igualar el diseño realizad en figma.
 
 ## Tecnologías
 Python, Django, HTML5, CSS3 (variables `:root`, Grid y Flexbox), JavaScript.
