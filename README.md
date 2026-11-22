@@ -37,9 +37,9 @@ Inicio, Sobre mí, Habilidades, Proyectos (con filtro en JavaScript) y Contacto 
 ### Escritorio y Móvil (390 px)
 En este link se encuentra la vista de figma coparandolos, contra la version web lista, tambien la movil.
 |
-  | `https://github.com/dionel965/nexo-portafolio/blob/main/capturas/vista-web-movil-figma.docx`
+  | https://github.com/dionel965/nexo-portafolio/blob/main/capturas/vista-web-movil-figma.docx
 
-En la cual hay que descargar
+En la cual hay que descargar este archivo .docs `vista-web-movil-figma.docx`
   
 ## Diferencias respecto al diseño
 - Respecto al diseño realizado en figma las cosas cambian ya en produccion,uno no espero encontrar complicaciones que lo atrasen,pero sin embargo se trato te igualar el diseño realizad en figma.
