@@ -1,0 +1,30 @@
+{% extends "atlas/base.html" %}
+{% load static %}
+
+{% block contenido %}
+<article class="ficha-tema" style="--img-fondo: url('{% static 'atlas/img/fondo-tema.jpg' %}');">
+  <div class="contenido-tema">
+    <header class="encabezado-articulo">
+      <p class="etiqueta-tema">Concepto</p>
+      <h1>{{ tema }}</h1>
+    </header>
+
+    <section class="cuerpo-articulo">
+      <p class="resumen-tema">{{ resumen }}</p>
+      <blockquote class="cita-destacada">
+        <p>“{{ cita }}”</p>
+        <footer>— {{ autor_cita }}</footer>
+      </blockquote>
+    </section>
+
+    <div class="acciones-tema">
+      <button class="boton-secundario" type="button" data-reflexion-btn>Ver pregunta guía</button>
+      <a class="boton-explorar" href="{% url 'atlas:inicio' %}">Volver al inicio</a>
+    </div>
+
+    <p class="pregunta-guia oculto" data-reflexion-texto>
+      ¿Qué parte de lo que hoy te preocupa depende de tu actitud y qué parte está fuera de tu control?
+    </p>
+  </div>
+</article>
+{% endblock %}

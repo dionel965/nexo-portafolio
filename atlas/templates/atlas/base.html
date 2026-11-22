@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ titulo_pagina }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'atlas/css/estilos.css' %}">
+  <script src="{% static 'atlas/js/main.js' %}" defer></script>
+</head>
+<body>
+  <header class="barra-superior">
+    <a class="marca" href="{% url 'atlas:inicio' %}">Atlas filosófico</a>
+    <button class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-btn>
+      ☰
+    </button>
+    <nav class="navegacion" data-nav>
+      <a href="{% url 'atlas:inicio' %}" class="{% if seccion_activa == 'inicio' %}activo{% endif %}">Inicio</a>
+      <a href="{% url 'atlas:estoicismo' %}" class="{% if seccion_activa == 'estoicismo' %}activo{% endif %}">Estoicismo</a>
+      <a href="{% url 'atlas:existencialismo' %}" class="{% if seccion_activa == 'existencialismo' %}activo{% endif %}">Existencialismo</a>
+      <a href="{% url 'atlas:etica' %}" class="{% if seccion_activa == 'etica' %}activo{% endif %}">Ética</a>
+      <a href="{% url 'atlas:tecnologia' %}" class="{% if seccion_activa == 'tecnologia' %}activo{% endif %}">Tecnología</a>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    {% block contenido %}{% endblock %}
+  </main>
+</body>
+</html>

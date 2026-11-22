@@ -1,0 +1,22 @@
+{% extends "atlas/base.html" %}
+{% load static %}
+
+{% block contenido %}
+<section class="pantalla-dividida">
+  <div class="panel-visual" style="--img-fondo: url('{% static 'atlas/img/fondo-inicio.jpg' %}');">
+    <div class="contenido-visual">
+      <span class="isotipo" aria-hidden="true">◈</span>
+      <div>
+        <p class="frase-visual">“Pensar despacio. Construir con intención.”</p>
+        <p class="ejes-visual">estoicismo · existencialismo · ética · tecnología</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-editorial">
+    <h1>Un mapa breve para preguntas esenciales.</h1>
+    <p class="subtitulo">Conceptos filosóficos explicados sin rodeos para pensar mejor en la era digital.</p>
+    <a class="boton-explorar" href="{% url 'atlas:estoicismo' %}">Explorar conceptos</a>
+  </div>
+</section>
+{% endblock %}
